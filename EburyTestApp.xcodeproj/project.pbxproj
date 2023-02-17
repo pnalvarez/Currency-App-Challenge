@@ -21,6 +21,11 @@
 		3F15F8B6299EB453003D4266 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B5299EB453003D4266 /* UIView.swift */; };
 		3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B7299EB477003D4266 /* UIStackView.swift */; };
 		3F15F8BA299EB66F003D4266 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B9299EB66F003D4266 /* TestViewController.swift */; };
+		3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */; };
+		3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BD299ED29C003D4266 /* UITableView.swift */; };
+		3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BF299ED2BA003D4266 /* ReusableView.swift */; };
+		3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */; };
+		3F15F8C4299ED552003D4266 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		3F15F8B5299EB453003D4266 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3F15F8B7299EB477003D4266 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		3F15F8B9299EB66F003D4266 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
+		3F15F8BD299ED29C003D4266 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		3F15F8BF299ED2BA003D4266 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewCell.swift; sourceTree = "<group>"; };
+		3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +178,10 @@
 			children = (
 				3F15F8AB299EAD8A003D4266 /* CurrencyAmountView.swift */,
 				3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */,
+				3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */,
+				3F15F8BF299ED2BA003D4266 /* ReusableView.swift */,
+				3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */,
+				3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -186,6 +200,7 @@
 				3F15F8B1299EB227003D4266 /* UIColor.swift */,
 				3F15F8B5299EB453003D4266 /* UIView.swift */,
 				3F15F8B7299EB477003D4266 /* UIStackView.swift */,
+				3F15F8BD299ED29C003D4266 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,10 +338,15 @@
 				3F15F876299EAB10003D4266 /* AppDelegate.swift in Sources */,
 				3F15F8AC299EAD8A003D4266 /* CurrencyAmountView.swift in Sources */,
 				3F15F878299EAB10003D4266 /* SceneDelegate.swift in Sources */,
+				3F15F8C4299ED552003D4266 /* CurrencyViewModel.swift in Sources */,
+				3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */,
+				3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */,
 				3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */,
 				3F15F8B6299EB453003D4266 /* UIView.swift in Sources */,
 				3F15F8AF299EAD9F003D4266 /* ViewCodable.swift in Sources */,
+				3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */,
 				3F15F8B2299EB227003D4266 /* UIColor.swift in Sources */,
+				3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */,
 				3F15F8BA299EB66F003D4266 /* TestViewController.swift in Sources */,
 				3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */,
 			);

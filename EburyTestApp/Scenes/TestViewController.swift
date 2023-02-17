@@ -8,9 +8,16 @@
 import UIKit
 
 class TestViewController: UIViewController {
-  private lazy var testView: CurrencyAmountView = {
-    let view = CurrencyAmountView()
-    view.setUpViewModel(.init(image: UIImage(named: "usaflag"), currencyCode: "USA", currencyName: "US Dollars", balance: "50,000,50"))
+  private lazy var imageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = UIImage(named: "background")
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    return imageView
+  }()
+  
+  private lazy var testView: CurrencyListView = {
+    let view = CurrencyListView()
+    view.setUpCurrencies([.init(image: UIImage(named: "usaflag"), code: "USD", name: "US Dollars", balance: "50,000.50"), .init(image: UIImage(named: "euroflag"), code: "EUR", name: "Euro", balance: "8,000.00"), .init(image: UIImage(named: "ukflag"), code: "GBP", name: "British Pounds", balance: "20,000.00")])
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
@@ -18,11 +25,17 @@ class TestViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+    view.addSubview(imageView)
     view.addSubview(testView)
     NSLayoutConstraint.activate([
-      testView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-      testView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-      testView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+      imageView.topAnchor.constraint(equalTo: view.topAnchor),
+      imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      
+      testView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      testView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      testView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])
   }
 }

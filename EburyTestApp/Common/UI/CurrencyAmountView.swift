@@ -82,7 +82,7 @@ final class CurrencyAmountView: UIView {
     containerView.layer.cornerRadius = Constants.cornerRadius
     containerView.layer.shadowColor = UIColor.black.cgColor
     containerView.layer.shadowOpacity = 0.3
-    containerView.layer.shadowOffset = CGSize(width: 5, height: 6)
+    containerView.layer.shadowOffset = CGSize(width: 2, height: 6)
     containerView.layer.shadowRadius = 8
     containerView.layer.shouldRasterize = true
     containerView.layer.rasterizationScale = UIScreen.main.scale
