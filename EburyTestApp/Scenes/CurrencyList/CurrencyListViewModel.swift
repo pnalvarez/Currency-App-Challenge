@@ -8,7 +8,7 @@
 import Combine
 
 protocol CurrencyListViewModelable {
-  
+
 }
 
 final class CurrencyListViewModel: CurrencyListViewModelable {

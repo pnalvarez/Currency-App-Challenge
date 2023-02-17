@@ -50,7 +50,7 @@ final class HeaderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func setupData(title: String, subtitle: String) {
+  func setupData(title: String, subtitle: String? = nil) {
     titleLabel.text = title
     subtitleLabel.text = subtitle
   }

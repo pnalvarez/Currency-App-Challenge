@@ -7,9 +7,7 @@
 
 import UIKit
 
-struct CurrencyViewModel {
-  let image: UIImage?
-  let code: String
-  let name: String
+struct CurrencyDisplayModel {
+  let currency: Currency
   let balance: String
 }

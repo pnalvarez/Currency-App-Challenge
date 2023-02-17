@@ -17,9 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let window = UIWindow(windowScene: windowScene)
       window.makeKeyAndVisible()
       self.window = window
-      let viewController = TestViewController()
-      let tabBarController = TabBarController()
-      tabBarController.viewControllers = [viewController]
+      let viewController = CurrencyListViewController()
+      viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "dock.rectangle"), tag: 0)
+      let productsViewController = ProductsFactory.build()
+      productsViewController.tabBarItem = UITabBarItem(title: "Products", image: UIImage(systemName: "star"), tag: 1)
+      let tabBarController = CustomTabBarController()
+      tabBarController.viewControllers = [viewController, productsViewController]
       window.rootViewController = tabBarController
     }
   }

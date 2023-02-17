@@ -7,9 +7,7 @@
 
 import UIKit
 
-import UIKit
-
-class TabBarController: UITabBarController {
+class CustomTabBarController: UITabBarController {
   
   var customTabBarView = UIView(frame: .zero)
   
@@ -43,11 +41,11 @@ class TabBarController: UITabBarController {
   
   private func setupTabBarUI() {
     // Setup your colors and corner radius
-    self.tabBar.backgroundColor = ColorPalette.backgroundGrey
-    self.tabBar.layer.cornerRadius = 20
+    self.tabBar.backgroundColor = ColorPalette.tabBar
+    self.tabBar.layer.cornerRadius = 10
     self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     self.tabBar.tintColor = ColorPalette.appCyan
-    self.tabBar.unselectedItemTintColor = ColorPalette.appGrey
+    self.tabBar.unselectedItemTintColor = ColorPalette.appGray
     
     // Remove the line
     if #available(iOS 13.0, *) {
@@ -64,7 +62,7 @@ class TabBarController: UITabBarController {
   private func addCustomTabBarView() {
     self.customTabBarView.frame = tabBar.frame
     
-    self.customTabBarView.backgroundColor = ColorPalette.backgroundGrey
+    self.customTabBarView.backgroundColor = ColorPalette.tabBar
     self.customTabBarView.layer.cornerRadius = 30
     self.customTabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     

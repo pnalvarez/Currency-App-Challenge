@@ -20,21 +20,27 @@
 		3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */; };
 		3F15F8B6299EB453003D4266 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B5299EB453003D4266 /* UIView.swift */; };
 		3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B7299EB477003D4266 /* UIStackView.swift */; };
-		3F15F8BA299EB66F003D4266 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B9299EB66F003D4266 /* TestViewController.swift */; };
+		3F15F8BA299EB66F003D4266 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8B9299EB66F003D4266 /* CurrencyListViewController.swift */; };
 		3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */; };
 		3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BD299ED29C003D4266 /* UITableView.swift */; };
 		3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8BF299ED2BA003D4266 /* ReusableView.swift */; };
 		3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */; };
-		3F15F8C4299ED552003D4266 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */; };
-		3F15F8C8299FC0D9003D4266 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C7299FC0D9003D4266 /* CurrencyListViewController.swift */; };
+		3F15F8C4299ED552003D4266 /* CurrencyDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */; };
 		3F15F8CA299FC0E7003D4266 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */; };
 		3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CB299FC23A003D4266 /* ProfileButton.swift */; };
 		3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CD299FC5B5003D4266 /* HeaderView.swift */; };
 		3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CF299FC929003D4266 /* ActivityView.swift */; };
-		3F15F8D2299FD469003D4266 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D1299FD469003D4266 /* UITabBarController.swift */; };
 		3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */; };
 		3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */; };
 		3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D7299FDAEF003D4266 /* UIImage.swift */; };
+		3F15F8DA299FE0ED003D4266 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D9299FE0ED003D4266 /* ProductsViewController.swift */; };
+		3F15F8DC299FE112003D4266 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8DB299FE112003D4266 /* ProductsViewModel.swift */; };
+		3F15F8DE299FE2B0003D4266 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8DD299FE2B0003D4266 /* WarningView.swift */; };
+		3F15F8E2299FFD00003D4266 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E1299FFD00003D4266 /* GradientView.swift */; };
+		3F15F8E429A0050A003D4266 /* ProductsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E329A0050A003D4266 /* ProductsFactory.swift */; };
+		3F15F8E829A01EF7003D4266 /* CurrencyListDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */; };
+		3F15F8EA29A0253C003D4266 /* CurrencyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */; };
+		3F15F8EC29A02978003D4266 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8EB29A02978003D4266 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,21 +78,28 @@
 		3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		3F15F8B5299EB453003D4266 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3F15F8B7299EB477003D4266 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
-		3F15F8B9299EB66F003D4266 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F15F8B9299EB66F003D4266 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
 		3F15F8BD299ED29C003D4266 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3F15F8BF299ED2BA003D4266 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewCell.swift; sourceTree = "<group>"; };
-		3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
-		3F15F8C7299FC0D9003D4266 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
+		3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDisplayModel.swift; sourceTree = "<group>"; };
 		3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		3F15F8CB299FC23A003D4266 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		3F15F8CD299FC5B5003D4266 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3F15F8CF299FC929003D4266 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		3F15F8D1299FD469003D4266 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
 		3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		3F15F8D7299FDAEF003D4266 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		3F15F8D9299FE0ED003D4266 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		3F15F8DB299FE112003D4266 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		3F15F8DD299FE2B0003D4266 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		3F15F8E1299FFD00003D4266 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		3F15F8E329A0050A003D4266 /* ProductsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFactory.swift; sourceTree = "<group>"; };
+		3F15F8E629A01D47003D4266 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDisplayModel.swift; sourceTree = "<group>"; };
+		3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListModel.swift; sourceTree = "<group>"; };
+		3F15F8EB29A02978003D4266 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +150,7 @@
 		3F15F874299EAB10003D4266 /* EburyTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F15F8E529A01D2C003D4266 /* Fonts */,
 				3F15F8A7299EAD5F003D4266 /* Scenes */,
 				3F15F8A6299EAD59003D4266 /* Common */,
 				3F15F8A5299EAD53003D4266 /* App */,
@@ -188,7 +202,6 @@
 			children = (
 				3F15F8C6299FC0B5003D4266 /* Products */,
 				3F15F8C5299FC0A6003D4266 /* CurrencyList */,
-				3F15F8B9299EB66F003D4266 /* TestViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -199,12 +212,13 @@
 				3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */,
 				3F15F8BF299ED2BA003D4266 /* ReusableView.swift */,
 				3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */,
-				3F15F8C3299ED552003D4266 /* CurrencyViewModel.swift */,
+				3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */,
 				3F15F8CB299FC23A003D4266 /* ProfileButton.swift */,
 				3F15F8CD299FC5B5003D4266 /* HeaderView.swift */,
 				3F15F8CF299FC929003D4266 /* ActivityView.swift */,
 				3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */,
 				3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */,
+				3F15F8E1299FFD00003D4266 /* GradientView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -224,7 +238,6 @@
 				3F15F8B5299EB453003D4266 /* UIView.swift */,
 				3F15F8B7299EB477003D4266 /* UIStackView.swift */,
 				3F15F8BD299ED29C003D4266 /* UITableView.swift */,
-				3F15F8D1299FD469003D4266 /* UITabBarController.swift */,
 				3F15F8D7299FDAEF003D4266 /* UIImage.swift */,
 			);
 			path = Extensions;
@@ -233,10 +246,13 @@
 		3F15F8C5299FC0A6003D4266 /* CurrencyList */ = {
 			isa = PBXGroup;
 			children = (
-				3F15F8C7299FC0D9003D4266 /* CurrencyListViewController.swift */,
+				3F15F8B9299EB66F003D4266 /* CurrencyListViewController.swift */,
 				3F15F8AB299EAD8A003D4266 /* CurrencyAmountView.swift */,
 				3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */,
 				3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */,
+				3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */,
+				3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */,
+				3F15F8EB29A02978003D4266 /* Currency.swift */,
 			);
 			path = CurrencyList;
 			sourceTree = "<group>";
@@ -244,8 +260,20 @@
 		3F15F8C6299FC0B5003D4266 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3F15F8D9299FE0ED003D4266 /* ProductsViewController.swift */,
+				3F15F8DB299FE112003D4266 /* ProductsViewModel.swift */,
+				3F15F8DD299FE2B0003D4266 /* WarningView.swift */,
+				3F15F8E329A0050A003D4266 /* ProductsFactory.swift */,
 			);
 			path = Products;
+			sourceTree = "<group>";
+		};
+		3F15F8E529A01D2C003D4266 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F15F8E629A01D47003D4266 /* SFProDisplay-Semibold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,27 +406,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F15F8E429A0050A003D4266 /* ProductsFactory.swift in Sources */,
 				3F15F876299EAB10003D4266 /* AppDelegate.swift in Sources */,
 				3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */,
 				3F15F8AC299EAD8A003D4266 /* CurrencyAmountView.swift in Sources */,
 				3F15F878299EAB10003D4266 /* SceneDelegate.swift in Sources */,
-				3F15F8C4299ED552003D4266 /* CurrencyViewModel.swift in Sources */,
+				3F15F8EC29A02978003D4266 /* Currency.swift in Sources */,
+				3F15F8C4299ED552003D4266 /* CurrencyDisplayModel.swift in Sources */,
 				3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */,
 				3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */,
+				3F15F8DE299FE2B0003D4266 /* WarningView.swift in Sources */,
+				3F15F8E2299FFD00003D4266 /* GradientView.swift in Sources */,
 				3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */,
 				3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */,
 				3F15F8B6299EB453003D4266 /* UIView.swift in Sources */,
 				3F15F8AF299EAD9F003D4266 /* ViewCodable.swift in Sources */,
 				3F15F8CA299FC0E7003D4266 /* CurrencyListViewModel.swift in Sources */,
 				3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */,
+				3F15F8E829A01EF7003D4266 /* CurrencyListDisplayModel.swift in Sources */,
+				3F15F8DC299FE112003D4266 /* ProductsViewModel.swift in Sources */,
+				3F15F8EA29A0253C003D4266 /* CurrencyListModel.swift in Sources */,
 				3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */,
-				3F15F8D2299FD469003D4266 /* UITabBarController.swift in Sources */,
-				3F15F8C8299FC0D9003D4266 /* CurrencyListViewController.swift in Sources */,
 				3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */,
 				3F15F8B2299EB227003D4266 /* UIColor.swift in Sources */,
+				3F15F8DA299FE0ED003D4266 /* ProductsViewController.swift in Sources */,
 				3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */,
 				3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */,
-				3F15F8BA299EB66F003D4266 /* TestViewController.swift in Sources */,
+				3F15F8BA299EB66F003D4266 /* CurrencyListViewController.swift in Sources */,
 				3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */,
 				3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */,
 			);

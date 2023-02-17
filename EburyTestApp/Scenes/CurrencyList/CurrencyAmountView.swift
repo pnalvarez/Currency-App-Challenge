@@ -62,7 +62,7 @@ final class CurrencyAmountView: UIView {
     let label = UILabel()
     label.font = UIFont(name: "SFProText-Regular", size: 15)
     label.textAlignment = .left
-    label.textColor = ColorPalette.appGrey
+    label.textColor = ColorPalette.appGray
     label.numberOfLines = 1
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
@@ -86,7 +86,7 @@ final class CurrencyAmountView: UIView {
     containerView.layer.shadowRadius = 8
     containerView.layer.shouldRasterize = true
     containerView.layer.rasterizationScale = UIScreen.main.scale
-    containerView.backgroundColor = .white
+    containerView.backgroundColor = ColorPalette.amountBackground
     buildView()
   }
   

@@ -18,19 +18,20 @@ final class CurrencyListView: UIView {
     static let viewAllButtonTrailing: CGFloat = -24
     static let tableViewTop: CGFloat = 16
     static let cornerRadius: CGFloat = 20
-    static let tableViewHeight: CGFloat = 320
+    static let tableViewHeight: CGFloat = 358
+    static let tableViewBottom: CGFloat = -16
   }
   
   private lazy var containerView: UIView = {
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = ColorPalette.backgroundGrey
+    view.backgroundColor = ColorPalette.backgroundGray
     return view
   }()
   
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.font = .systemFont(ofSize: 17, weight: .bold)
+    label.font = UIFont(name: "SFProDisplay-Semibold", size: 17)
     label.numberOfLines = 1
     label.textAlignment = .left
     label.text = Constants.title
@@ -43,6 +44,7 @@ final class CurrencyListView: UIView {
     button.setTitle(Constants.viewAll, for: .normal)
     button.addTarget(self, action: #selector(didTapViewAll), for: .touchUpInside)
     button.setTitleColor(ColorPalette.appCyan, for: .normal)
+    button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 17)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
@@ -53,13 +55,13 @@ final class CurrencyListView: UIView {
     tableView.dataSource = self
     tableView.bounces = false
     tableView.separatorStyle = .none
-    tableView.backgroundColor = ColorPalette.backgroundGrey
+    tableView.backgroundColor = ColorPalette.backgroundGray
     tableView.registerCell(cellType: CurrencyListTableViewCell.self)
     tableView.translatesAutoresizingMaskIntoConstraints = false
     return tableView
   }()
   
-  private var currencies: [CurrencyViewModel]? {
+  private var currencies: [CurrencyDisplayModel]? {
     didSet {
       tableView.reloadData()
     }
@@ -82,7 +84,7 @@ final class CurrencyListView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func setUpCurrencies(_ currencies: [CurrencyViewModel]) {
+  func setUpCurrencies(_ currencies: [CurrencyDisplayModel]) {
     self.currencies = currencies
   }
 }
@@ -109,11 +111,11 @@ extension CurrencyListView: UITableViewDelegate, UITableViewDataSource {
       return UITableViewCell()
     }
     let cell = tableView.dequeueReusableCell(indexPath: indexPath, type: CurrencyListTableViewCell.self)
-    let currency = currencies[indexPath.row]
-    cell.setUpData(image: currency.image,
-                   currencyCode: currency.code,
-                   currencyName: currency.name,
-                   balance: currency.balance)
+    let model = currencies[indexPath.row]
+    cell.setUpData(image: model.currency.image,
+                   currencyCode: model.currency.rawValue,
+                   currencyName: model.currency.name,
+                   balance: model.balance)
     return cell
   }
 }
@@ -140,7 +142,7 @@ extension CurrencyListView: ViewCodable {
       tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.tableViewTop),
       tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
       tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-      tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+      tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: Constants.tableViewBottom),
       tableView.heightAnchor.constraint(equalToConstant: Constants.tableViewHeight),
     ])
   }
