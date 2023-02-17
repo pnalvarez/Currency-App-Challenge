@@ -13,13 +13,20 @@ final class CurrencyListView: UIView {
     static let title = "Your currencies"
     static let viewAll = "View all"
     
-    static let titleLabelTop: CGFloat = 20
+    static let titleLabelTop: CGFloat = 40
     static let titleLabelLeading: CGFloat = 24
     static let viewAllButtonTrailing: CGFloat = -24
     static let tableViewTop: CGFloat = 16
     static let cornerRadius: CGFloat = 20
     static let tableViewHeight: CGFloat = 358
   }
+  
+  private lazy var containerView: UIView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = ColorPalette.backgroundGrey
+    return view
+  }()
   
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
@@ -46,6 +53,7 @@ final class CurrencyListView: UIView {
     tableView.dataSource = self
     tableView.bounces = false
     tableView.separatorStyle = .none
+    tableView.backgroundColor = ColorPalette.backgroundGrey
     tableView.registerCell(cellType: CurrencyListTableViewCell.self)
     tableView.translatesAutoresizingMaskIntoConstraints = false
     return tableView
@@ -59,7 +67,13 @@ final class CurrencyListView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = ColorPalette.backgroundGrey
+    layer.cornerRadius = Constants.cornerRadius
+    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowOpacity = 0.2
+    layer.shadowOffset = CGSize(width: 6, height: -200)
+    layer.shadowRadius = 8
+    layer.shouldRasterize = true
+    layer.rasterizationScale = UIScreen.main.scale
     applyMask()
     buildView()
   }
@@ -106,21 +120,27 @@ extension CurrencyListView: UITableViewDelegate, UITableViewDataSource {
 
 extension CurrencyListView: ViewCodable {
   func buildViewHierarchy() {
-    addSubviews(titleLabel, viewAllButton, tableView)
+    addSubviews(containerView)
+    containerView.addSubviews(titleLabel, viewAllButton, tableView)
   }
   
   func setUpConstraints() {
     NSLayoutConstraint.activate([
-      titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.titleLabelTop),
-      titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.titleLabelLeading),
+      containerView.topAnchor.constraint(equalTo: topAnchor),
+      containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+      containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      
+      titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Constants.titleLabelTop),
+      titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: Constants.titleLabelLeading),
       
       viewAllButton.topAnchor.constraint(equalTo: titleLabel.topAnchor),
       viewAllButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.viewAllButtonTrailing),
       
       tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.tableViewTop),
-      tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-      tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-      tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+      tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+      tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
       tableView.heightAnchor.constraint(equalToConstant: Constants.tableViewHeight),
     ])
   }

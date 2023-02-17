@@ -8,6 +8,26 @@
 import UIKit
 
 class TestViewController: UIViewController {
+  private lazy var profileButton: ProfileButton = {
+    let button = ProfileButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+  
+  private lazy var loadingView: ActivityView = {
+    let view = ActivityView()
+    view.startAnimating()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+  
+  private lazy var headerView: HeaderView = {
+    let view = HeaderView()
+    view.setupData(title: "Welcome", subtitle: "Company name")
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+  
   private lazy var imageView: UIImageView = {
     let imageView = UIImageView()
     imageView.image = UIImage(named: "background")
@@ -24,10 +44,25 @@ class TestViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tabBarItem = UITabBarItem(title: "Home", image: <#T##UIImage?#>, tag: <#T##Int#>)
     view.backgroundColor = .white
     view.addSubview(imageView)
+    view.addSubview(profileButton)
+    view.addSubview(loadingView)
+    view.addSubview(headerView)
     view.addSubview(testView)
     NSLayoutConstraint.activate([
+      profileButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+      profileButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+      
+      loadingView.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: 32),
+      loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      
+      headerView.topAnchor.constraint(equalTo: loadingView.bottomAnchor, constant: 12),
+      headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      
       imageView.topAnchor.constraint(equalTo: view.topAnchor),
       imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
