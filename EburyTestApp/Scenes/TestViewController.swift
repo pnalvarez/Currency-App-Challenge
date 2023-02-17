@@ -44,7 +44,7 @@ class TestViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tabBarItem = UITabBarItem(title: "Home", image: <#T##UIImage?#>, tag: <#T##Int#>)
+    tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "wallet"), tag: 0)
     view.backgroundColor = .white
     view.addSubview(imageView)
     view.addSubview(profileButton)
@@ -68,7 +68,7 @@ class TestViewController: UIViewController {
       imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
       
-      testView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      testView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
       testView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       testView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])

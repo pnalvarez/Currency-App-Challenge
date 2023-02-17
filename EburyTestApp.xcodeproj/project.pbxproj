@@ -31,6 +31,10 @@
 		3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CB299FC23A003D4266 /* ProfileButton.swift */; };
 		3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CD299FC5B5003D4266 /* HeaderView.swift */; };
 		3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CF299FC929003D4266 /* ActivityView.swift */; };
+		3F15F8D2299FD469003D4266 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D1299FD469003D4266 /* UITabBarController.swift */; };
+		3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */; };
+		3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */; };
+		3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D7299FDAEF003D4266 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		3F15F8CB299FC23A003D4266 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		3F15F8CD299FC5B5003D4266 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3F15F8CF299FC929003D4266 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		3F15F8D1299FD469003D4266 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
+		3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		3F15F8D7299FDAEF003D4266 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +203,8 @@
 				3F15F8CB299FC23A003D4266 /* ProfileButton.swift */,
 				3F15F8CD299FC5B5003D4266 /* HeaderView.swift */,
 				3F15F8CF299FC929003D4266 /* ActivityView.swift */,
+				3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */,
+				3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 				3F15F8B5299EB453003D4266 /* UIView.swift */,
 				3F15F8B7299EB477003D4266 /* UIStackView.swift */,
 				3F15F8BD299ED29C003D4266 /* UITableView.swift */,
+				3F15F8D1299FD469003D4266 /* UITabBarController.swift */,
+				3F15F8D7299FDAEF003D4266 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,16 +386,20 @@
 				3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */,
 				3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */,
 				3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */,
+				3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */,
 				3F15F8B6299EB453003D4266 /* UIView.swift in Sources */,
 				3F15F8AF299EAD9F003D4266 /* ViewCodable.swift in Sources */,
 				3F15F8CA299FC0E7003D4266 /* CurrencyListViewModel.swift in Sources */,
 				3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */,
 				3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */,
+				3F15F8D2299FD469003D4266 /* UITabBarController.swift in Sources */,
 				3F15F8C8299FC0D9003D4266 /* CurrencyListViewController.swift in Sources */,
 				3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */,
 				3F15F8B2299EB227003D4266 /* UIColor.swift in Sources */,
 				3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */,
+				3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */,
 				3F15F8BA299EB66F003D4266 /* TestViewController.swift in Sources */,
+				3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */,
 				3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

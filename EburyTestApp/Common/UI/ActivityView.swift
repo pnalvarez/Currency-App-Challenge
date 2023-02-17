@@ -9,7 +9,7 @@ import UIKit
 
 final class ActivityView: UIActivityIndicatorView {
   override var intrinsicContentSize: CGSize {
-    CGSize(width: frame.width, height: 112)
+    CGSize(width: frame.width, height: 48)
   }
   override init(frame: CGRect = .zero) {
     super.init(frame: frame)

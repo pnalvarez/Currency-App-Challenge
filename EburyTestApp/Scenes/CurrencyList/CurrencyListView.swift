@@ -18,7 +18,7 @@ final class CurrencyListView: UIView {
     static let viewAllButtonTrailing: CGFloat = -24
     static let tableViewTop: CGFloat = 16
     static let cornerRadius: CGFloat = 20
-    static let tableViewHeight: CGFloat = 358
+    static let tableViewHeight: CGFloat = 320
   }
   
   private lazy var containerView: UIView = {
@@ -134,7 +134,7 @@ extension CurrencyListView: ViewCodable {
       titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Constants.titleLabelTop),
       titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: Constants.titleLabelLeading),
       
-      viewAllButton.topAnchor.constraint(equalTo: titleLabel.topAnchor),
+      viewAllButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
       viewAllButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.viewAllButtonTrailing),
       
       tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.tableViewTop),
