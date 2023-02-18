@@ -14,6 +14,7 @@ final class ActivityView: UIActivityIndicatorView {
   override init(frame: CGRect = .zero) {
     super.init(frame: frame)
     color = .white
+    style = .medium
     hidesWhenStopped = true
   }
   

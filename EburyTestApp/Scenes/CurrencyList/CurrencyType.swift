@@ -1,5 +1,5 @@
 //
-//  Currency.swift
+//  CurrencyType.swift
 //  EburyTestApp
 //
 //  Created by Pedro Alvarez on 17/02/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Currency: String {
+enum CurrencyType: String {
   case usd = "USD"
   case eur = "EUR"
   case gbp = "GBP"

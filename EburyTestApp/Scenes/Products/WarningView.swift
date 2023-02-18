@@ -34,7 +34,7 @@ final class WarningView: UIView {
   
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.font = .systemFont(ofSize: 22)
+    label.font = UIFont(name: "SFProDisplay-Regular", size: 22)
     label.numberOfLines = 0
     label.textAlignment = .center
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +43,7 @@ final class WarningView: UIView {
   
   private lazy var descriptionLabel: UILabel = {
     let label = UILabel()
-    label.font = .systemFont(ofSize: 17)
+    label.font = UIFont(name: "SFProText-Regular", size: 17)
     label.numberOfLines = 0
     label.textAlignment = .center
     label.textColor = ColorPalette.appGray

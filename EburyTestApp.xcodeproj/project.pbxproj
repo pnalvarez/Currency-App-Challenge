@@ -40,7 +40,21 @@
 		3F15F8E429A0050A003D4266 /* ProductsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E329A0050A003D4266 /* ProductsFactory.swift */; };
 		3F15F8E829A01EF7003D4266 /* CurrencyListDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */; };
 		3F15F8EA29A0253C003D4266 /* CurrencyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */; };
-		3F15F8EC29A02978003D4266 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8EB29A02978003D4266 /* Currency.swift */; };
+		3F15F8EC29A02978003D4266 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8EB29A02978003D4266 /* CurrencyType.swift */; };
+		3F15F8EE29A11676003D4266 /* EndpointExposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8ED29A11676003D4266 /* EndpointExposable.swift */; };
+		3F15F8F129A116C7003D4266 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8F029A116C7003D4266 /* API.swift */; };
+		3F15F8F329A116D2003D4266 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8F229A116D2003D4266 /* HTTPMethod.swift */; };
+		3F15F8F629A11711003D4266 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8F529A11711003D4266 /* DependencyContainer.swift */; };
+		3F15F8F829A118DF003D4266 /* WalletEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */; };
+		3F15F8FA29A119DC003D4266 /* CurrencyListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8F929A119DC003D4266 /* CurrencyListService.swift */; };
+		3F15F93A29A15762003D4266 /* CurrencyListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F93929A15762003D4266 /* CurrencyListFactory.swift */; };
+		3F15F94129A16E07003D4266 /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */; };
+		3F15F94229A16E07003D4266 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */; };
+		3F15F94429A16F1F003D4266 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */; };
+		3FAF392529A171E700D4F80A /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */; };
+		3FAF392729A1739200D4F80A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */; };
+		3FAF392A29A1864C00D4F80A /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */; };
+		3FAF392C29A186D800D4F80A /* NumberFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF392B29A186D700D4F80A /* NumberFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +113,21 @@
 		3F15F8E629A01D47003D4266 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDisplayModel.swift; sourceTree = "<group>"; };
 		3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListModel.swift; sourceTree = "<group>"; };
-		3F15F8EB29A02978003D4266 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		3F15F8EB29A02978003D4266 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
+		3F15F8ED29A11676003D4266 /* EndpointExposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointExposable.swift; sourceTree = "<group>"; };
+		3F15F8F029A116C7003D4266 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3F15F8F229A116D2003D4266 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3F15F8F529A11711003D4266 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEndpoint.swift; sourceTree = "<group>"; };
+		3F15F8F929A119DC003D4266 /* CurrencyListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListService.swift; sourceTree = "<group>"; };
+		3F15F93929A15762003D4266 /* CurrencyListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListFactory.swift; sourceTree = "<group>"; };
+		3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProText-Regular.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProText-Regular.dataset/SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProDisplay-Semibold.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProDisplay-Semibold.dataset/SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
+		3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProDisplay-Regular.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProDisplay-Regular.dataset/SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		3FAF392B29A186D700D4F80A /* NumberFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +158,11 @@
 		3F15F869299EAB10003D4266 = {
 			isa = PBXGroup;
 			children = (
+				3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */,
+				3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */,
+				3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */,
+				3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */,
+				3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */,
 				3F15F874299EAB10003D4266 /* EburyTestApp */,
 				3F15F88B299EAB12003D4266 /* EburyTestAppTests */,
 				3F15F895299EAB12003D4266 /* EburyTestAppUITests */,
@@ -190,6 +223,9 @@
 		3F15F8A6299EAD59003D4266 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3FAF392829A1864200D4F80A /* Utils */,
+				3F15F8F429A11704003D4266 /* Facade */,
+				3F15F8EF29A116BB003D4266 /* API */,
 				3F15F8B0299EB21A003D4266 /* Extensions */,
 				3F15F8AD299EAD8F003D4266 /* Protocols */,
 				3F15F8AA299EAD7A003D4266 /* UI */,
@@ -210,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */,
-				3F15F8BF299ED2BA003D4266 /* ReusableView.swift */,
 				3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */,
 				3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */,
 				3F15F8CB299FC23A003D4266 /* ProfileButton.swift */,
@@ -219,6 +254,7 @@
 				3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */,
 				3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */,
 				3F15F8E1299FFD00003D4266 /* GradientView.swift */,
+				3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -226,7 +262,10 @@
 		3F15F8AD299EAD8F003D4266 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3F15F8BF299ED2BA003D4266 /* ReusableView.swift */,
 				3F15F8AE299EAD9F003D4266 /* ViewCodable.swift */,
+				3F15F8ED29A11676003D4266 /* EndpointExposable.swift */,
+				3FAF392B29A186D700D4F80A /* NumberFormatting.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -252,7 +291,9 @@
 				3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */,
 				3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */,
 				3F15F8E929A0253C003D4266 /* CurrencyListModel.swift */,
-				3F15F8EB29A02978003D4266 /* Currency.swift */,
+				3F15F8EB29A02978003D4266 /* CurrencyType.swift */,
+				3F15F8F929A119DC003D4266 /* CurrencyListService.swift */,
+				3F15F93929A15762003D4266 /* CurrencyListFactory.swift */,
 			);
 			path = CurrencyList;
 			sourceTree = "<group>";
@@ -274,6 +315,31 @@
 				3F15F8E629A01D47003D4266 /* SFProDisplay-Semibold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F15F8EF29A116BB003D4266 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3F15F8F029A116C7003D4266 /* API.swift */,
+				3F15F8F229A116D2003D4266 /* HTTPMethod.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3F15F8F429A11704003D4266 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				3F15F8F529A11711003D4266 /* DependencyContainer.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		3FAF392829A1864200D4F80A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +447,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F15F882299EAB12003D4266 /* LaunchScreen.storyboard in Resources */,
+				3F15F94229A16E07003D4266 /* SFProDisplay-Semibold.ttf in Resources */,
+				3F15F94429A16F1F003D4266 /* SFProDisplay-Bold.ttf in Resources */,
+				3FAF392529A171E700D4F80A /* SFProText-Bold.ttf in Resources */,
+				3FAF392729A1739200D4F80A /* SFProDisplay-Regular.ttf in Resources */,
+				3F15F94129A16E07003D4266 /* SFProText-Regular.ttf in Resources */,
 				3F15F87F299EAB12003D4266 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,27 +482,36 @@
 				3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */,
 				3F15F8AC299EAD8A003D4266 /* CurrencyAmountView.swift in Sources */,
 				3F15F878299EAB10003D4266 /* SceneDelegate.swift in Sources */,
-				3F15F8EC29A02978003D4266 /* Currency.swift in Sources */,
+				3F15F8EC29A02978003D4266 /* CurrencyType.swift in Sources */,
 				3F15F8C4299ED552003D4266 /* CurrencyDisplayModel.swift in Sources */,
 				3F15F8C0299ED2BA003D4266 /* ReusableView.swift in Sources */,
 				3F15F8BC299ED0D8003D4266 /* CurrencyListView.swift in Sources */,
+				3FAF392C29A186D800D4F80A /* NumberFormatting.swift in Sources */,
 				3F15F8DE299FE2B0003D4266 /* WarningView.swift in Sources */,
 				3F15F8E2299FFD00003D4266 /* GradientView.swift in Sources */,
 				3F15F8B8299EB477003D4266 /* UIStackView.swift in Sources */,
+				3F15F8F329A116D2003D4266 /* HTTPMethod.swift in Sources */,
 				3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */,
 				3F15F8B6299EB453003D4266 /* UIView.swift in Sources */,
 				3F15F8AF299EAD9F003D4266 /* ViewCodable.swift in Sources */,
+				3F15F8F629A11711003D4266 /* DependencyContainer.swift in Sources */,
 				3F15F8CA299FC0E7003D4266 /* CurrencyListViewModel.swift in Sources */,
 				3F15F8BE299ED29C003D4266 /* UITableView.swift in Sources */,
 				3F15F8E829A01EF7003D4266 /* CurrencyListDisplayModel.swift in Sources */,
 				3F15F8DC299FE112003D4266 /* ProductsViewModel.swift in Sources */,
 				3F15F8EA29A0253C003D4266 /* CurrencyListModel.swift in Sources */,
+				3F15F8EE29A11676003D4266 /* EndpointExposable.swift in Sources */,
+				3F15F93A29A15762003D4266 /* CurrencyListFactory.swift in Sources */,
 				3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */,
 				3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */,
+				3F15F8FA29A119DC003D4266 /* CurrencyListService.swift in Sources */,
+				3F15F8F829A118DF003D4266 /* WalletEndpoint.swift in Sources */,
+				3F15F8F129A116C7003D4266 /* API.swift in Sources */,
 				3F15F8B2299EB227003D4266 /* UIColor.swift in Sources */,
 				3F15F8DA299FE0ED003D4266 /* ProductsViewController.swift in Sources */,
 				3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */,
 				3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */,
+				3FAF392A29A1864C00D4F80A /* CurrencyFormatter.swift in Sources */,
 				3F15F8BA299EB66F003D4266 /* CurrencyListViewController.swift in Sources */,
 				3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */,
 				3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */,
@@ -609,6 +689,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,6 +716,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -51,7 +51,7 @@ final class CurrencyAmountView: UIView {
   
   private lazy var currencyCodeLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont(name: "SFProDisplay-Bold", size: 17)
+    label.font = UIFont(name: "SFProText-Bold", size: 17)
     label.textAlignment = .left
     label.numberOfLines = 1
     label.translatesAutoresizingMaskIntoConstraints = false

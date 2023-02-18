@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
+  var subscription: AnyCancellable?
 
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let window = UIWindow(windowScene: windowScene)
       window.makeKeyAndVisible()
       self.window = window
-      let viewController = CurrencyListViewController()
+      let viewController = CurrencyListFactory.build()
       viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "dock.rectangle"), tag: 0)
       let productsViewController = ProductsFactory.build()
       productsViewController.tabBarItem = UITabBarItem(title: "Products", image: UIImage(systemName: "star"), tag: 1)

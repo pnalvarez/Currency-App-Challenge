@@ -25,7 +25,7 @@ final class HeaderView: UIView {
   
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.font = .systemFont(ofSize: 34, weight: .bold)
+    label.font = UIFont(name: "SFProDisplay-Bold", size: 34)
     label.textColor = ColorPalette.appWhite
     label.numberOfLines = 0
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ final class HeaderView: UIView {
   
   private lazy var subtitleLabel: UILabel = {
     let label = UILabel()
-    label.font = .systemFont(ofSize: 17, weight: .bold)
+    label.font = UIFont(name: "SFProDisplay-Semibold", size: 17)
     label.textColor = ColorPalette.appWhite
     label.numberOfLines = 0
     label.translatesAutoresizingMaskIntoConstraints = false

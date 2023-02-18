@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class CurrencyListViewController: UIViewController {
   private lazy var backgroundView: GradientView = {
@@ -29,7 +30,7 @@ final class CurrencyListViewController: UIViewController {
   
   private lazy var headerView: HeaderView = {
     let view = HeaderView()
-    view.setupData(title: "Welcome", subtitle: "Company name")
+    view.setupData(title: "Welcome")
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
@@ -43,14 +44,75 @@ final class CurrencyListViewController: UIViewController {
   
   private lazy var currencyView: CurrencyListView = {
     let view = CurrencyListView()
-    view.setUpCurrencies([.init(currency: .usd, balance: "50.000,25"), .init(currency: .eur, balance: "50.000,25"), .init(currency: .gbp, balance: "50.000,25"), .init(currency: .brl, balance: "50.000,25"), .init(currency: .cny, balance: "50.000,25")])
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
   
+  private let viewModel: CurrencyListViewModelable
+  
+  private lazy var subscriptions: Set<AnyCancellable> = .init()
+  
+  init(viewModel: CurrencyListViewModelable) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+    buildView()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    buildView()
+    setupSubscribers()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewModel.viewWillAppear()
+  }
+}
+
+private extension CurrencyListViewController {
+  func setupSubscribers() {
+    viewModel
+      .currencyListDataPublisher
+      .sink(receiveValue: { [weak self] value in
+        guard let self else { return }
+        self.headerView.setupData(title: self.viewModel.headerTitle,
+                                  subtitle: value.companyName)
+        self.currencyView.setUpCurrencies(value.currencies)
+    })
+      .store(in: &subscriptions)
+    viewModel
+      .errorPublisher
+      .sink(receiveValue: { [weak self] value in
+        guard let self else { return }
+        self.presentErrorAlert(value)
+    })
+      .store(in: &subscriptions)
+    viewModel
+      .loadingPublisher
+      .sink(receiveValue: { [weak self] value in
+        guard let self else { return }
+        value ? self.startLoading() : self.stopLoading()
+      })
+      .store(in: &subscriptions)
+  }
+  
+  func presentErrorAlert(_ description: String) {
+    let alert = UIAlertController(title: viewModel.errorTitle, message: description, preferredStyle: .alert)
+    alert.addAction(.init(title: "Ok", style: .default))
+    present(alert, animated: true)
+  }
+  
+  func startLoading() {
+    loadingView.startAnimating()
+    loadingView.isHidden = false
+  }
+  
+  func stopLoading() {
+    loadingView.stopAnimating()
   }
 }
 
