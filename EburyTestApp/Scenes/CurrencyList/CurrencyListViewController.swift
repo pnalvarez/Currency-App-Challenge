@@ -9,9 +9,17 @@ import UIKit
 import Combine
 
 final class CurrencyListViewController: UIViewController {
+  // MARK: - Constants for constraints
   private enum Constants {
     static let currencyListTop: CGFloat = 88
+    static let profileButtonTop: CGFloat = 8
+    static let profileButtonLeading: CGFloat = 16
+    static let loadingViewTop: CGFloat = 32
+    static let headerViewTop: CGFloat = 12
+    static let imageViewTop: CGFloat = 24
   }
+  
+  // MARK: - UI properties
   private lazy var backgroundView: GradientView = {
     let view = GradientView()
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +41,7 @@ final class CurrencyListViewController: UIViewController {
   
   private lazy var headerView: HeaderView = {
     let view = HeaderView()
-    view.setupData(title: "Welcome")
+    view.setupData(title: viewModel.headerTitle)
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
@@ -51,10 +59,14 @@ final class CurrencyListViewController: UIViewController {
     return view
   }()
   
+  // MARK: - Data Properties
+  
   private let viewModel: CurrencyListViewModelable
   
+  //To save the Combine subscriptions in memory
   private lazy var subscriptions: Set<AnyCancellable> = .init()
   
+  // MARK: - Lifecycke
   init(viewModel: CurrencyListViewModelable) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
@@ -76,6 +88,7 @@ final class CurrencyListViewController: UIViewController {
   }
 }
 
+// MARK: - Private methods
 private extension CurrencyListViewController {
   func setupSubscribers() {
     viewModel
@@ -105,7 +118,7 @@ private extension CurrencyListViewController {
   
   func presentErrorAlert(_ description: String) {
     let alert = UIAlertController(title: viewModel.errorTitle, message: description, preferredStyle: .alert)
-    alert.addAction(.init(title: "Ok", style: .default))
+    alert.addAction(.init(title: viewModel.okText, style: .default))
     present(alert, animated: true)
   }
   
@@ -119,6 +132,7 @@ private extension CurrencyListViewController {
   }
 }
 
+// MARK: - View Code pipeline implementation
 extension CurrencyListViewController: ViewCodable {
   func buildViewHierarchy() {
     view.addSubviews(backgroundView,
@@ -131,26 +145,32 @@ extension CurrencyListViewController: ViewCodable {
   
   func setUpConstraints() {
     NSLayoutConstraint.activate([
+      // BACKGROUND VIEW
       backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
       backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
       
-      profileButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-      profileButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+      // PROFILE BUTTON
+      profileButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constants.profileButtonTop),
+      profileButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.profileButtonLeading),
       
-      loadingView.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: 32),
+      // LOADING VIEW
+      loadingView.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: Constants.loadingViewTop),
       loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
-      headerView.topAnchor.constraint(equalTo: loadingView.bottomAnchor, constant: 12),
+      // HEADER VIEW
+      headerView.topAnchor.constraint(equalTo: loadingView.bottomAnchor, constant: Constants.headerViewTop),
       headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
-      imageView.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: 24),
+      // IMAGE VIEW
+      imageView.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: Constants.imageViewTop),
       imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
+      // CURRENCY LIST VIEW
       currencyListView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: Constants.currencyListTop),
       currencyListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
       currencyListView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

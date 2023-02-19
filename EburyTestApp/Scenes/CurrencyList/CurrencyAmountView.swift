@@ -19,6 +19,9 @@ final class CurrencyAmountView: UIView {
     static let flagImageViewLeading: CGFloat = 16
     static let balanceLabelTrailing: CGFloat = -16
     static let cornerRadius: CGFloat = 8
+    static let shadowRadius: CGFloat = 8
+    static let shadowOpacity: Float = 0.2
+    static let shadowOffset: CGSize = .init(width: 0, height: 6)
   }
   
   // MARK: - ViewModel
@@ -29,6 +32,7 @@ final class CurrencyAmountView: UIView {
     let balance: String
   }
   
+  // MARK: - UI properties
   private lazy var containerView: UIView = {
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -79,13 +83,7 @@ final class CurrencyAmountView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    containerView.layer.cornerRadius = Constants.cornerRadius
-    containerView.layer.shadowColor = UIColor.black.cgColor
-    containerView.layer.shadowOpacity = 0.2
-    containerView.layer.shadowOffset = CGSize(width: 0, height: 6)
-    containerView.layer.shadowRadius = 8
-    containerView.layer.shouldRasterize = true
-    containerView.layer.rasterizationScale = UIScreen.main.scale
+    applyShadow()
     containerView.backgroundColor = ColorPalette.amountBackground
     buildView()
   }
@@ -104,6 +102,18 @@ final class CurrencyAmountView: UIView {
     currencyCodeLabel.text = viewModel.currencyCode
     currencyNameLabel.text = viewModel.currencyName
     balanceLabel.text = viewModel.balance
+  }
+}
+
+private extension CurrencyAmountView {
+  func applyShadow() {
+    containerView.layer.cornerRadius = Constants.cornerRadius
+    containerView.layer.shadowColor = UIColor.black.cgColor
+    containerView.layer.shadowOpacity = Constants.shadowOpacity
+    containerView.layer.shadowOffset = Constants.shadowOffset
+    containerView.layer.shadowRadius = Constants.shadowRadius
+    containerView.layer.shouldRasterize = true
+    containerView.layer.rasterizationScale = UIScreen.main.scale
   }
 }
 
