@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - View Model interface
 protocol ProductsViewModelable {
   var title: String { get }
   var warningImage: UIImage? { get }
@@ -23,6 +24,7 @@ final class ProductsViewModel: ProductsViewModelable {
     static let warningDescription = "We are currently working in more features to offer the best experience"
   }
   
+  // MARK: - Data properties
   var title: String {
     Constants.title
   }

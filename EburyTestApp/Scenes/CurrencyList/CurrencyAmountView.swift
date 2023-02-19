@@ -18,7 +18,7 @@ final class CurrencyAmountView: UIView {
     static let flagImageViewWidth: CGFloat = 32
     static let flagImageViewLeading: CGFloat = 16
     static let balanceLabelTrailing: CGFloat = -16
-    static let cornerRadius: CGFloat = 8
+    static let cornerRadius: CGFloat = 4
     static let shadowRadius: CGFloat = 8
     static let shadowOpacity: Float = 0.2
     static let shadowOffset: CGSize = .init(width: 0, height: 6)
@@ -56,6 +56,7 @@ final class CurrencyAmountView: UIView {
   private lazy var currencyCodeLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont(name: "SFProText-Bold", size: 17)
+    label.adjustsFontForContentSizeCategory = true
     label.textAlignment = .left
     label.numberOfLines = 1
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,6 +66,7 @@ final class CurrencyAmountView: UIView {
   private lazy var currencyNameLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont(name: "SFProText-Regular", size: 15)
+    label.adjustsFontForContentSizeCategory = true
     label.textAlignment = .left
     label.textColor = ColorPalette.appGray
     label.numberOfLines = 1
@@ -75,6 +77,7 @@ final class CurrencyAmountView: UIView {
   private lazy var balanceLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont(name: "SFProDisplay-Bold", size: 20)
+    label.adjustsFontForContentSizeCategory = true
     label.numberOfLines = 1
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textAlignment = .right
@@ -97,6 +100,7 @@ final class CurrencyAmountView: UIView {
     flagImageView.layer.cornerRadius = flagImageView.frame.width / 2
   }
   
+  // Fill data
   func setUpViewModel(_ viewModel: ViewModel) {
     flagImageView.image = viewModel.image
     currencyCodeLabel.text = viewModel.currencyCode
@@ -138,7 +142,7 @@ extension CurrencyAmountView: ViewCodable {
       flagImageView.heightAnchor.constraint(equalToConstant: Constants.flagImageViewHeight),
       flagImageView.widthAnchor.constraint(equalToConstant: Constants.flagImageViewWidth),
       flagImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-      
+
       currencyStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Constants.currencyStackTop),
       currencyStackView.leadingAnchor.constraint(equalTo: flagImageView.trailingAnchor, constant: Constants.currencyStackLeading),
       currencyStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: Constants.currencyStackBotton),

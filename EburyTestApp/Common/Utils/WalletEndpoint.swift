@@ -19,6 +19,7 @@ enum WalletEndpoint: EndpointExposable {
     }
   }
   
+  //HTTP Method
   var httpMethod: HTTPMethod {
     .GET
   }

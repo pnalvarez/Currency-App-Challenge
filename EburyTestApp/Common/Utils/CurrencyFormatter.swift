@@ -12,19 +12,17 @@ protocol CurrencyFormatting {
 }
 
 final class CurrencyFormatter: CurrencyFormatting {
-  typealias Dependencies = HasNumberFormatter
+  private var numberFormatter: NumberFormatting
   
-  private var dependencies: Dependencies
-  
-  init(dependencies: Dependencies = DependencyContainer()) {
-    self.dependencies = dependencies
+  init(numberFormatter: NumberFormatting = NumberFormatter()) {
+    self.numberFormatter = numberFormatter
   }
   
   func format(_ double: Double) -> String {
-    dependencies.numberFormatter.numberStyle = .decimal
-    dependencies.numberFormatter.maximumFractionDigits = 2
+    numberFormatter.numberStyle = .decimal
+    numberFormatter.maximumFractionDigits = 2
 
-    var formattedValue = dependencies.numberFormatter.string(for: double) ?? ""
+    var formattedValue = numberFormatter.string(for: double) ?? ""
     formattedValue = formattedValue.replacingOccurrences(of: ".", with: "#")
     formattedValue = formattedValue.replacingOccurrences(of: ",", with: ".")
     formattedValue = formattedValue.replacingOccurrences(of: "#", with: ",")

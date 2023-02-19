@@ -31,6 +31,7 @@ final class CurrencyListView: UIView {
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont(name: "SFProDisplay-Semibold", size: 17)
+    label.adjustsFontForContentSizeCategory = true
     label.numberOfLines = 1
     label.textAlignment = .left
     label.text = Constants.title
@@ -42,8 +43,9 @@ final class CurrencyListView: UIView {
     let button = UIButton()
     button.setTitle(Constants.viewAll, for: .normal)
     button.addTarget(self, action: #selector(didTapViewAll), for: .touchUpInside)
-    button.setTitleColor(ColorPalette.appCyan, for: .normal)
+    button.setTitleColor(ColorPalette.appSecondary, for: .normal)
     button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 17)
+    button.titleLabel?.adjustsFontForContentSizeCategory = true
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()

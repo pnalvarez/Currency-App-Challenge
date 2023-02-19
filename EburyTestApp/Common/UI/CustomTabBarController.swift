@@ -7,72 +7,64 @@
 
 import UIKit
 
+// MARK: - CustomTabBarController
+// Custom UITabBarController for stylizing the tab bar
 class CustomTabBarController: UITabBarController {
+  // MARK: - Constants
+  private enum Constants {
+    static let bottomOffset: CGFloat = 64
+    static let tabBarCornerRadius: CGFloat = 10
+    static let customViewRadius: CGFloat = 30
+    static let shadowOffset: CGSize = .init(width: -4, height: -6)
+    static let shadowOpacity: Float = 0.5
+    static let shadowRadius: CGFloat = 20
+  }
   
-  private lazy var customTabBarView = UIView()
+  private lazy var customView = UIView()
   
   // MARK: View lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.setupTabBarUI()
-    self.addCustomTabBarView()
+    configureTabBar()
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    self.setupCustomTabBarFrame()
+    configureCustomFrame()
   }
   
   // MARK: Private methods
-  
-  private func setupCustomTabBarFrame() {
-    let height = self.view.safeAreaInsets.bottom + 64
-    
-    var tabFrame = self.tabBar.frame
-    tabFrame.size.height = height
-    tabFrame.origin.y = self.view.frame.size.height - height
-    
-    self.tabBar.frame = tabFrame
-    self.tabBar.setNeedsLayout()
-    self.tabBar.layoutIfNeeded()
-    customTabBarView.frame = tabBar.frame
+  private func configureTabBar() {
+    // Configure Tab Bar appearance
+    tabBar.backgroundColor = ColorPalette.tabBar
+    tabBar.layer.cornerRadius = Constants.tabBarCornerRadius
+    tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    tabBar.tintColor = ColorPalette.appSecondary
+    tabBar.unselectedItemTintColor = ColorPalette.appGray
+    // Retrieve tab bar appearance
+    let appearance = tabBar.standardAppearance
+    tabBar.standardAppearance = appearance
+    // Configure Custom View
+    customView.frame = tabBar.frame
+    customView.backgroundColor = ColorPalette.tabBar
+    customView.layer.cornerRadius = Constants.customViewRadius
+    customView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    customView.layer.shadowColor = ColorPalette.mainShadow.cgColor
+    customView.layer.shadowOffset = Constants.shadowOffset
+    customView.layer.shadowOpacity = Constants.shadowOpacity
+    customView.layer.shadowRadius = Constants.shadowRadius
+    view.addSubview(customView)
+    view.bringSubviewToFront(tabBar)
   }
   
-  private func setupTabBarUI() {
-    // Setup your colors and corner radius
-    self.tabBar.backgroundColor = ColorPalette.tabBar
-    self.tabBar.layer.cornerRadius = 10
-    self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    self.tabBar.tintColor = ColorPalette.appCyan
-    self.tabBar.unselectedItemTintColor = ColorPalette.appGray
-    
-    // Remove the line
-    if #available(iOS 13.0, *) {
-      let appearance = self.tabBar.standardAppearance
-      appearance.shadowImage = nil
-      appearance.shadowColor = nil
-      self.tabBar.standardAppearance = appearance
-    } else {
-      self.tabBar.shadowImage = UIImage()
-      self.tabBar.backgroundImage = UIImage()
-    }
-  }
-  
-  private func addCustomTabBarView() {
-    self.customTabBarView.frame = tabBar.frame
-    
-    self.customTabBarView.backgroundColor = ColorPalette.tabBar
-    self.customTabBarView.layer.cornerRadius = 30
-    self.customTabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    
-    self.customTabBarView.layer.masksToBounds = false
-    self.customTabBarView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-    self.customTabBarView.layer.shadowOffset = CGSize(width: -4, height: -6)
-    self.customTabBarView.layer.shadowOpacity = 0.5
-    self.customTabBarView.layer.shadowRadius = 20
-    
-    self.view.addSubview(customTabBarView)
-    self.view.bringSubviewToFront(self.tabBar)
+  private func configureCustomFrame() {
+    let height = view.safeAreaInsets.bottom + Constants.bottomOffset
+    var frame = tabBar.frame
+    frame.size.height = height
+    frame.origin.y = view.frame.size.height - height
+    tabBar.frame = frame
+    tabBar.layoutIfNeeded()
+    customView.frame = tabBar.frame
   }
 }

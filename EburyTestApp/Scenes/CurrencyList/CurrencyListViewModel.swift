@@ -23,7 +23,9 @@ protocol CurrencyListViewModelable {
 // MARK: - CurrencyListModel
 // Concrete type
 final class CurrencyListViewModel: CurrencyListViewModelable {
-  // MARK: Constants
+  // MARK: - Needed dependencies
+  typealias Dependencies = HasCurrencyFormatter
+ // MARK: Constants
   private enum Constants {
     static let headerTitle = "Welcome"
     static let errorTitle = "You got an error"
@@ -33,6 +35,7 @@ final class CurrencyListViewModel: CurrencyListViewModelable {
   
   // MARK: Data properties
   private let service: CurrencyListServicing
+  private let dependencies: Dependencies
   
   // Subjects to send data to ViewController, who subscribes to them
   private lazy var currencyListDataSubject: PassthroughSubject<CurrencyListDisplayModel, Never> = .init()
@@ -70,10 +73,11 @@ final class CurrencyListViewModel: CurrencyListViewModelable {
     Constants.backgroundImage
   }
   
-  
   // MARK: - Lifecyle
-  init(service: CurrencyListServicing = CurrencyListService()) {
+  init(service: CurrencyListServicing = CurrencyListService(),
+       dependencies: Dependencies = DependencyContainer()) {
     self.service = service
+    self.dependencies = dependencies
   }
   
   func viewWillAppear() {
@@ -82,8 +86,7 @@ final class CurrencyListViewModel: CurrencyListViewModelable {
     // Fetches currency list from Service
       .fetchCurrencyList()
     // Maps to Display Model, which is more suitable format to the screen having information like the image
-      .map({ CurrencyListDisplayModel(companyName: $0.companyName,
-                                      currencies: $0.amount.compactMap({ CurrencyDisplayModel(input: $0) }))})
+      .map(mapModelToDisplayModel)
     // Subscriber
       .sink(receiveCompletion: { [weak self] completion in
         guard let self else { return }
@@ -98,3 +101,26 @@ final class CurrencyListViewModel: CurrencyListViewModelable {
       })
   }
 }
+
+private extension CurrencyListViewModel {
+  func mapModelToDisplayModel(_ model: CurrencyListModel) -> CurrencyListDisplayModel {
+    let amounts = model.amount
+    var displayAmounts = [CurrencyDisplayModel]()
+    for amountModel in amounts {
+      if let currencyType = CurrencyType(rawValue: amountModel.currency) {
+        displayAmounts.append(CurrencyDisplayModel(currency: currencyType,
+                                                   balance: formatCurrencyAmount(amountModel.amount)))
+      }
+    }
+    let output = CurrencyListDisplayModel(companyName: model.companyName,
+                                          currencies: displayAmounts)
+    return output
+  }
+  
+  func formatCurrencyAmount(_ amount: String) -> String {
+    let double = Double(amount) ?? 0
+    let formatted = dependencies.currencyFormatter.format(double)
+    return formatted
+  }
+}
+

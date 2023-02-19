@@ -21,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       self.window = window
       let viewController = CurrencyListFactory.build()
       viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "wallet"), tag: 0)
-      viewController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 20)
       let productsViewController = ProductsFactory.build()
       productsViewController.tabBarItem = UITabBarItem(title: "Products", image: UIImage(named: "star"), tag: 1)
       let tabBarController = CustomTabBarController()

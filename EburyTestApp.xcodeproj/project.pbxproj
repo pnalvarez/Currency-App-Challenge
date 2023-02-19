@@ -11,7 +11,6 @@
 		3F15F878299EAB10003D4266 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F877299EAB10003D4266 /* SceneDelegate.swift */; };
 		3F15F87F299EAB12003D4266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F87E299EAB12003D4266 /* Assets.xcassets */; };
 		3F15F882299EAB12003D4266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F880299EAB12003D4266 /* LaunchScreen.storyboard */; };
-		3F15F88D299EAB12003D4266 /* EburyTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F88C299EAB12003D4266 /* EburyTestAppTests.swift */; };
 		3F15F897299EAB12003D4266 /* EburyTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F896299EAB12003D4266 /* EburyTestAppUITests.swift */; };
 		3F15F899299EAB12003D4266 /* EburyTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F898299EAB12003D4266 /* EburyTestAppUITestsLaunchTests.swift */; };
 		3F15F8AC299EAD8A003D4266 /* CurrencyAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8AB299EAD8A003D4266 /* CurrencyAmountView.swift */; };
@@ -28,11 +27,8 @@
 		3F15F8C4299ED552003D4266 /* CurrencyDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */; };
 		3F15F8CA299FC0E7003D4266 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */; };
 		3F15F8CC299FC23A003D4266 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CB299FC23A003D4266 /* ProfileButton.swift */; };
-		3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CD299FC5B5003D4266 /* HeaderView.swift */; };
 		3F15F8D0299FC929003D4266 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8CF299FC929003D4266 /* ActivityView.swift */; };
 		3F15F8D4299FDA0E003D4266 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */; };
-		3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */; };
-		3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D7299FDAEF003D4266 /* UIImage.swift */; };
 		3F15F8DA299FE0ED003D4266 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8D9299FE0ED003D4266 /* ProductsViewController.swift */; };
 		3F15F8DC299FE112003D4266 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8DB299FE112003D4266 /* ProductsViewModel.swift */; };
 		3F15F8DE299FE2B0003D4266 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15F8DD299FE2B0003D4266 /* WarningView.swift */; };
@@ -51,6 +47,12 @@
 		3F15F94129A16E07003D4266 /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */; };
 		3F15F94229A16E07003D4266 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */; };
 		3F15F94429A16F1F003D4266 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */; };
+		3F30D1EB29A2B5D500BD18DA /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1EA29A2B5D500BD18DA /* CurrencyFormatterTests.swift */; };
+		3F30D1ED29A2B5F500BD18DA /* DependencyContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1EC29A2B5F500BD18DA /* DependencyContainerMock.swift */; };
+		3F30D1F029A2B6A800BD18DA /* NumberFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1EF29A2B6A800BD18DA /* NumberFormatterMock.swift */; };
+		3F30D1F229A2B85800BD18DA /* CurrencyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1F129A2B85800BD18DA /* CurrencyListViewModelTests.swift */; };
+		3F30D1F429A2B89A00BD18DA /* CurrencyListServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1F329A2B89A00BD18DA /* CurrencyListServiceMock.swift */; };
+		3F30D1F629A2C55900BD18DA /* CurrencyFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D1F529A2C55900BD18DA /* CurrencyFormatterMock.swift */; };
 		3FAF392529A171E700D4F80A /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */; };
 		3FAF392729A1739200D4F80A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */; };
 		3FAF392A29A1864C00D4F80A /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */; };
@@ -82,7 +84,6 @@
 		3F15F881299EAB12003D4266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F15F883299EAB12003D4266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F15F888299EAB12003D4266 /* EburyTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EburyTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F15F88C299EAB12003D4266 /* EburyTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EburyTestAppTests.swift; sourceTree = "<group>"; };
 		3F15F892299EAB12003D4266 /* EburyTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EburyTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F15F896299EAB12003D4266 /* EburyTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EburyTestAppUITests.swift; sourceTree = "<group>"; };
 		3F15F898299EAB12003D4266 /* EburyTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EburyTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -100,11 +101,8 @@
 		3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDisplayModel.swift; sourceTree = "<group>"; };
 		3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		3F15F8CB299FC23A003D4266 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
-		3F15F8CD299FC5B5003D4266 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3F15F8CF299FC929003D4266 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
-		3F15F8D7299FDAEF003D4266 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		3F15F8D9299FE0ED003D4266 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		3F15F8DB299FE112003D4266 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		3F15F8DD299FE2B0003D4266 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
@@ -121,11 +119,17 @@
 		3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEndpoint.swift; sourceTree = "<group>"; };
 		3F15F8F929A119DC003D4266 /* CurrencyListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListService.swift; sourceTree = "<group>"; };
 		3F15F93929A15762003D4266 /* CurrencyListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListFactory.swift; sourceTree = "<group>"; };
-		3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProText-Regular.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProText-Regular.dataset/SFProText-Regular.ttf"; sourceTree = "<group>"; };
-		3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProDisplay-Semibold.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProDisplay-Semibold.dataset/SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProDisplay-Semibold.ttf"; path = "../App/Assets.xcassets/fonts/SFProDisplay-Semibold.dataset/SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		3F30D1EA29A2B5D500BD18DA /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
+		3F30D1EC29A2B5F500BD18DA /* DependencyContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerMock.swift; sourceTree = "<group>"; };
+		3F30D1EF29A2B6A800BD18DA /* NumberFormatterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterMock.swift; sourceTree = "<group>"; };
+		3F30D1F129A2B85800BD18DA /* CurrencyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModelTests.swift; sourceTree = "<group>"; };
+		3F30D1F329A2B89A00BD18DA /* CurrencyListServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListServiceMock.swift; sourceTree = "<group>"; };
+		3F30D1F529A2C55900BD18DA /* CurrencyFormatterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterMock.swift; sourceTree = "<group>"; };
 		3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
-		3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProDisplay-Regular.ttf"; path = "EburyTestApp/App/Assets.xcassets/fonts/SFProDisplay-Regular.dataset/SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		3FAF392B29A186D700D4F80A /* NumberFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,11 +162,6 @@
 		3F15F869299EAB10003D4266 = {
 			isa = PBXGroup;
 			children = (
-				3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */,
-				3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */,
-				3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */,
-				3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */,
-				3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */,
 				3F15F874299EAB10003D4266 /* EburyTestApp */,
 				3F15F88B299EAB12003D4266 /* EburyTestAppTests */,
 				3F15F895299EAB12003D4266 /* EburyTestAppUITests */,
@@ -195,7 +194,8 @@
 		3F15F88B299EAB12003D4266 /* EburyTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F15F88C299EAB12003D4266 /* EburyTestAppTests.swift */,
+				3F30D1EE29A2B5F900BD18DA /* Mocks */,
+				3F30D1E929A2B5A500BD18DA /* Test Cases */,
 			);
 			path = EburyTestAppTests;
 			sourceTree = "<group>";
@@ -247,14 +247,10 @@
 			children = (
 				3F15F8B3299EB2A3003D4266 /* ColorPalette.swift */,
 				3F15F8C1299ED2F1003D4266 /* CurrencyListTableViewCell.swift */,
-				3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */,
 				3F15F8CB299FC23A003D4266 /* ProfileButton.swift */,
-				3F15F8CD299FC5B5003D4266 /* HeaderView.swift */,
 				3F15F8CF299FC929003D4266 /* ActivityView.swift */,
 				3F15F8D3299FDA0E003D4266 /* CustomTabBarController.swift */,
-				3F15F8D5299FDA1D003D4266 /* RoundedShadowView.swift */,
 				3F15F8E1299FFD00003D4266 /* GradientView.swift */,
-				3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -277,7 +273,6 @@
 				3F15F8B5299EB453003D4266 /* UIView.swift */,
 				3F15F8B7299EB477003D4266 /* UIStackView.swift */,
 				3F15F8BD299ED29C003D4266 /* UITableView.swift */,
-				3F15F8D7299FDAEF003D4266 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +282,7 @@
 			children = (
 				3F15F8B9299EB66F003D4266 /* CurrencyListViewController.swift */,
 				3F15F8AB299EAD8A003D4266 /* CurrencyAmountView.swift */,
+				3F15F8C3299ED552003D4266 /* CurrencyDisplayModel.swift */,
 				3F15F8BB299ED0D8003D4266 /* CurrencyListView.swift */,
 				3F15F8C9299FC0E7003D4266 /* CurrencyListViewModel.swift */,
 				3F15F8E729A01EF7003D4266 /* CurrencyListDisplayModel.swift */,
@@ -312,6 +308,11 @@
 		3F15F8E529A01D2C003D4266 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3FAF392629A1739200D4F80A /* SFProDisplay-Regular.ttf */,
+				3FAF392429A171E700D4F80A /* SFProText-Bold.ttf */,
+				3F15F94329A16F1F003D4266 /* SFProDisplay-Bold.ttf */,
+				3F15F93E29A16E07003D4266 /* SFProDisplay-Semibold.ttf */,
+				3F15F93D29A16E06003D4266 /* SFProText-Regular.ttf */,
 				3F15F8E629A01D47003D4266 /* SFProDisplay-Semibold.ttf */,
 			);
 			path = Fonts;
@@ -334,9 +335,30 @@
 			path = Facade;
 			sourceTree = "<group>";
 		};
+		3F30D1E929A2B5A500BD18DA /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				3F30D1EA29A2B5D500BD18DA /* CurrencyFormatterTests.swift */,
+				3F30D1F129A2B85800BD18DA /* CurrencyListViewModelTests.swift */,
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
+		3F30D1EE29A2B5F900BD18DA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3F30D1EC29A2B5F500BD18DA /* DependencyContainerMock.swift */,
+				3F30D1EF29A2B6A800BD18DA /* NumberFormatterMock.swift */,
+				3F30D1F329A2B89A00BD18DA /* CurrencyListServiceMock.swift */,
+				3F30D1F529A2C55900BD18DA /* CurrencyFormatterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		3FAF392829A1864200D4F80A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3F15F8F729A118DF003D4266 /* WalletEndpoint.swift */,
 				3FAF392929A1864C00D4F80A /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
@@ -413,6 +435,7 @@
 					};
 					3F15F887299EAB12003D4266 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 3F15F871299EAB10003D4266;
 					};
 					3F15F891299EAB12003D4266 = {
@@ -479,7 +502,6 @@
 			files = (
 				3F15F8E429A0050A003D4266 /* ProductsFactory.swift in Sources */,
 				3F15F876299EAB10003D4266 /* AppDelegate.swift in Sources */,
-				3F15F8CE299FC5B5003D4266 /* HeaderView.swift in Sources */,
 				3F15F8AC299EAD8A003D4266 /* CurrencyAmountView.swift in Sources */,
 				3F15F878299EAB10003D4266 /* SceneDelegate.swift in Sources */,
 				3F15F8EC29A02978003D4266 /* CurrencyType.swift in Sources */,
@@ -510,10 +532,8 @@
 				3F15F8B2299EB227003D4266 /* UIColor.swift in Sources */,
 				3F15F8DA299FE0ED003D4266 /* ProductsViewController.swift in Sources */,
 				3F15F8C2299ED2F1003D4266 /* CurrencyListTableViewCell.swift in Sources */,
-				3F15F8D8299FDAEF003D4266 /* UIImage.swift in Sources */,
 				3FAF392A29A1864C00D4F80A /* CurrencyFormatter.swift in Sources */,
 				3F15F8BA299EB66F003D4266 /* CurrencyListViewController.swift in Sources */,
-				3F15F8D6299FDA1D003D4266 /* RoundedShadowView.swift in Sources */,
 				3F15F8B4299EB2A3003D4266 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +542,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F15F88D299EAB12003D4266 /* EburyTestAppTests.swift in Sources */,
+				3F30D1ED29A2B5F500BD18DA /* DependencyContainerMock.swift in Sources */,
+				3F30D1F029A2B6A800BD18DA /* NumberFormatterMock.swift in Sources */,
+				3F30D1F229A2B85800BD18DA /* CurrencyListViewModelTests.swift in Sources */,
+				3F30D1F629A2C55900BD18DA /* CurrencyFormatterMock.swift in Sources */,
+				3F30D1EB29A2B5D500BD18DA /* CurrencyFormatterTests.swift in Sources */,
+				3F30D1F429A2B89A00BD18DA /* CurrencyListServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,14 +764,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.EburyTestAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EburyTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EburyTestApp";
@@ -758,10 +790,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.EburyTestAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

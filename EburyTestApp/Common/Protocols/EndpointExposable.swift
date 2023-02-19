@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - EndpointExposable
+// Protocol representing an object for an endpoint
 protocol EndpointExposable {
     var path: String { get }
     var httpMethod: HTTPMethod { get }
