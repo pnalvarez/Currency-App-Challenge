@@ -18,7 +18,6 @@ final class CurrencyListView: UIView {
     static let viewAllButtonTrailing: CGFloat = -24
     static let tableViewTop: CGFloat = 16
     static let cornerRadius: CGFloat = 20
-    static let tableViewHeight: CGFloat = 358
     static let tableViewBottom: CGFloat = -16
   }
   
@@ -143,7 +142,6 @@ extension CurrencyListView: ViewCodable {
       tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
       tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
       tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: Constants.tableViewBottom),
-      tableView.heightAnchor.constraint(equalToConstant: Constants.tableViewHeight),
     ])
   }
 }

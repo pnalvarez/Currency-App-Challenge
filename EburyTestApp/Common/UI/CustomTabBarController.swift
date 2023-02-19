@@ -9,7 +9,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
   
-  var customTabBarView = UIView(frame: .zero)
+  private lazy var customTabBarView = UIView()
   
   // MARK: View lifecycle
   

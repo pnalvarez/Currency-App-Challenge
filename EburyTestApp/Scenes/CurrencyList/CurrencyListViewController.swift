@@ -9,6 +9,9 @@ import UIKit
 import Combine
 
 final class CurrencyListViewController: UIViewController {
+  private enum Constants {
+    static let currencyListTop: CGFloat = 88
+  }
   private lazy var backgroundView: GradientView = {
     let view = GradientView()
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +45,7 @@ final class CurrencyListViewController: UIViewController {
     return imageView
   }()
   
-  private lazy var currencyView: CurrencyListView = {
+  private lazy var currencyListView: CurrencyListView = {
     let view = CurrencyListView()
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
@@ -81,7 +84,7 @@ private extension CurrencyListViewController {
         guard let self else { return }
         self.headerView.setupData(title: self.viewModel.headerTitle,
                                   subtitle: value.companyName)
-        self.currencyView.setUpCurrencies(value.currencies)
+        self.currencyListView.setUpCurrencies(value.currencies)
     })
       .store(in: &subscriptions)
     viewModel
@@ -123,7 +126,7 @@ extension CurrencyListViewController: ViewCodable {
                      profileButton,
                      loadingView,
                      headerView,
-                     currencyView)
+                     currencyListView)
   }
   
   func setUpConstraints() {
@@ -148,9 +151,10 @@ extension CurrencyListViewController: ViewCodable {
       imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       
-      currencyView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-      currencyView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      currencyView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+      currencyListView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: Constants.currencyListTop),
+      currencyListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      currencyListView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      currencyListView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])
   }
 }
